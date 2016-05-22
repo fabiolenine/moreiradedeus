@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-ng-app="mdApp">
 <head>
     <meta name="msvalidate.01" content="880E8D73897A1AF02393AC0A1663F33D" /> <!-- Meta tag bing -->
     
@@ -175,18 +175,47 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-9  wow fadeInRight animated">
-                    <form class="contact-form" action="">
+                <div class="col-md-9  wow fadeInRight animated" data-ng-controller="mdController">
+                    <form class="contact-form" method="post" action="">
                         <div class="row">
                             <div class="col-md-6">
-                                <input type="text" class="form-control" id="name" placeholder="Nome">
-                                <input type="email" class="form-control" id="email" placeholder="Email">
-                                <input type="text" class="form-control" id="subject" placeholder="Assunto">                                
+                                <input type				= "text" 
+									   name				= "name"
+									   class			= "form-control"
+									   id				= "name"
+									   required
+									   placeholder		= "Nome"
+									   data-ng-model	= "enviocontato.nome">
+                                <input type				= "email" 
+									   name				= "email"
+									   class			= "form-control" 
+									   id				= "email"
+									   required
+									   placeholder		= "Email"
+									   ng-model-options	= "{debounce: 500}"
+									   data-ng-model	= "enviocontato.email">
+                                <input type				= "text"
+									   name				= "assunto"
+									   class			= "form-control" 
+									   id				= "subject"
+									   required
+									   placeholder		= "Assunto"
+									   data-ng-model	= "enviocontato.assunto">                                
                             </div>
                             <div class="col-md-6">
-                                <textarea class="form-control" id="message" rows="25" cols="10" placeholder="  Texto da Mensagem..."></textarea>                                
+                                <textarea name			= "message"
+										  class			= "form-control" 
+										  id			= "message"
+										  required
+										  rows			= "25" 
+										  cols			= "10" 
+										  placeholder	= "  Texto da Mensagem..."
+										  data-ng-model	= "enviocontato.mensagem"></textarea>                                
                             </div>
-                            <button type="button" class="btn btn-default submit-btn form_submit">ENVIAR MENSAGEM</button>
+                            <button type				= "button" 
+									class				= "btn btn-default submit-btn form_submit"
+									data-ng-disabled	= "contact-form.email.$error.email || contact-form.email.$error.required"
+									data-ng-click		= "enviarcontato()">ENVIAR MENSAGEM</button>
                         </div>
                     </form>
                 </div>
@@ -257,6 +286,7 @@
     <script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/owl.carousel.min.js"></script>
     <script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/wow.min.js"></script>
     <script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/script.min.js"></script>
+	<script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/mdController.js"></script>
  <!-- =========================
      GOOGLE ANALYTICS
 ============================== -->   
