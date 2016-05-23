@@ -426,9 +426,10 @@
                     </div>
                 </div>
                 <div class="col-md-9  wow fadeInRight animated" data-ng-controller="mdController">
-                    <form name 		= "contact-form" 
+                    <form name 		= "formContato" 
 						  class		= "contact-form" 
-						  method 	= "post" action="">
+						  method 	= "post" 
+						  action	= "">
                         <div class="row">
                             <div class="col-md-6">
                                 <input type				= "text" 
@@ -466,12 +467,12 @@
                             </div>
                             <button type				= "button" 
 									class				= "btn btn-default submit-btn form_submit"
-									data-ng-disabled	= "contact-form.email.$error.email || contact-form.email.$error.required"
+									data-ng-disabled	= "formContato.email.$error.email || formContato.email.$error.required"
 									data-ng-click		= "enviarcontato()">ENVIAR MENSAGEM</button>
                         </div>
-						<div class="row" data-ng-show = "msgshow">
+						<div class="row" data-ng-show = "msg.show">
 							<div class="col-md-12 text-center">
-                        		<h3>{{msgretorno}}</h3>
+                        		<h3>{{msg.retorno}}</h3>
                     		</div>
 						</div>
                 </div>
