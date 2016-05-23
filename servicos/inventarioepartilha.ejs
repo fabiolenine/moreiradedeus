@@ -195,7 +195,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container" data-ng-controller="mdController">
             <div class="row">
                 <div class="col-md-3  wow fadeInLeft animated">
                     <div class="single_contact_info">
@@ -205,7 +205,7 @@
                     </div>
                     <div class="single_contact_info">
                         <h2>Email</h2>
-                        <address><p><a href="mailto:monica@cartoriomoreiradedeus.not.br" itemprop="email">monica@cartoriomoreiradedeus.not.br</a></p></address>
+                        <address><p><a href="mailto:ola@cartoriomoreiradedeus.not.br" itemprop="email">ola@cartoriomoreiradedeus.not.br</a></p></address>
                     </div>
                     <div class="single_contact_info" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                         <h2>Endereço</h2>
@@ -224,8 +224,11 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-9  wow fadeInRight animated" data-ng-controller="mdController">
-                    <form class="contact-form" method="post" action="">
+                <div class="col-md-9  wow fadeInRight animated">
+                    <form name 		= "formContato" 
+						  class		= "contact-form" 
+						  method 	= "post" 
+						  action	= "">
                         <div class="row">
                             <div class="col-md-6">
                                 <input type				= "text" 
@@ -263,12 +266,41 @@
                             </div>
                             <button type				= "button" 
 									class				= "btn btn-default submit-btn form_submit"
-									data-ng-disabled	= "contact-form.email.$error.email || contact-form.email.$error.required"
+									data-ng-disabled	= "formContato.email.$error.email || formContato.email.$error.required"
+									data-toggle			= "modal"
+									data-target			= "#msgModal"
 									data-ng-click		= "enviarcontato()">ENVIAR MENSAGEM</button>
                         </div>
                     </form>
                 </div>
             </div>
+			
+			<!-- Modal -->
+			<div class="modal fade" id="msgModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type			= "button" 
+							class			= "close" 
+							data-dismiss	= "modal" 
+							aria-label		= "Close"
+							data-ng-click	= "zerar()"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Mensagem</h4>
+				  </div>
+				  <div class="modal-body">
+					<p>{{msg.retorno}}</p>
+				  </div>
+				  <div class="modal-footer">
+					<button type			= "button" 
+							class			= "btn btn-default" 
+							data-dismiss	= "modal" 
+							data-ng-click 	= "zerar()">Fechar</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!-- Fim do bloco do Modal -->
+			
         </div>
         <div class="container">
             <div class="row">
