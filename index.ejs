@@ -470,7 +470,7 @@
 									data-ng-disabled	= "formContato.email.$error.email || formContato.email.$error.required"
 									data-ng-click		= "enviarcontato()">ENVIAR MENSAGEM</button>
                         </div>
-						<div class="row" data-ng-show = "msg.show">
+						<div class="row" ng-show = "{{msg.show}}">
 							<div class="col-md-12 text-center">
                         		<h3>{{msg.retorno}}</h3>
                     		</div>
