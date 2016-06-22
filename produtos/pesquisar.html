@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br" data-ng-app="mdApp">
 <head>
+    <meta name="msvalidate.01" content="880E8D73897A1AF02393AC0A1663F33D" /> <!-- Meta tag bing -->
+    
     <meta http-equiv="X-UA-Compatible"      content="IE=edge">
     <meta name="robots"                     content="all, index, follow"/>
     
     <!-- Geral -->
-    <meta name="title"                      content="União Estável - Cartório Moreira de Deus">
+    <meta name="title"                      content="Cartório Moreira de Deus">
     <meta name="language"                   content="pt-br"/>
     <meta charset="utf-8">
     <meta name="viewport"                   content="width=device-width, initial-scale=1.0">
-    <meta name="description"                content="União Estável - Instrumento para formalizar a convivência entre duas pessoas, que agem como se casadas fossem.">
-    <meta name="keywords"                   content="cartório fortaleza, cartório, cartório em fortaleza, cartório de notas, tabelionato de notas, cartorio tabelionato, cartório moreira de deus, moreira de deus, estável, união, união estável">    
+    <meta name="description"                content="Cartório Moreira de Deus - Existe para fornecer segurança jurídica e atender com qualidade a sociedade em Fortaleza - Ceará.">
+    <meta name="keywords"                   content="cartório fortaleza, cartório, cartório em fortaleza, cartório de notas, tabelionato de notas, cartorio tabelionato, cartório moreira de deus, moreira de deus">    
     <meta name="author"                     content="Lenines - www.lenines.com">
     <meta name="copyright"                  content="2016">
     
@@ -21,10 +23,10 @@
     
     <!-- Meta tags do Facebook -->
     <meta property="og:locale"              content="pt_BR">
-    <meta property="og:url"                 content="http://www.cartoriomoreiradedeus.not.br/servicos/uniaoestavel.html">
-    <meta property="og:title"               content="União Estável - Cartório Moreira de Deus">
+    <meta property="og:url"                 content="http://www.cartoriomoreiradedeus.not.br">
+    <meta property="og:title"               content="Cartório Moreira de Deus">
     <meta property="og:site_name"           content="Cartório Moreira de Deus">
-    <meta property="og:description"         content="União Estável - Instrumento para formalizar a convivência entre duas pessoas, que agem como se casadas fossem.">
+    <meta property="og:description"         content="Cartório Moreira de Deus - Existe para fornecer segurança jurídica e atender com qualidade a sociedade em Fortaleza - Ceará.">
     <meta property="og:type"                content="website">
     <meta property="og:image"               content="https://storage.googleapis.com/discoveryone/public/images/moreiradedeus/newlogo.png">
     <meta property="og:image:type"          content="image/png">
@@ -96,55 +98,71 @@
 	                    <span class="icon-bar"></span>
 	                    <span class="icon-bar"></span>
 	                  </button>
-	                  <a class="navbar-brand" itemprop="url" href="http://www.cartoriomoreiradedeus.not.br/servicos/uniaoestavel.html"><img itemprop="logo" src="https://storage.googleapis.com/discoveryone/public/images/moreiradedeus/newlogoMD.png" alt="Cartório Moreira de Deus"></a>
+	                  <a class="navbar-brand" itemprop="url" href="http://www.cartoriomoreiradedeus.not.br"><img src="https://storage.googleapis.com/discoveryone/public/images/moreiradedeus/newlogo.png" alt="10º Tabelionato de Notas de Fortaleza"></a>
 	                </div>
 	                <!-- Collect the nav links, forms, and other content for toggling -->
 	                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	                  <ul class="nav navbar-nav navbar-right">
-	                    <li><a href="http://www.cartoriomoreiradedeus.not.br">Início</a></li>
-	                    <li><a href="http://www.cartoriomoreiradedeus.not.br/servicos">Serviços</a></li>
-	                    <li><a href="http://www.cartoriomoreiradedeus.not.br/ocartorio">O Cartório</a></li>
-	                    <li><a href="http://www.cartoriomoreiradedeus.not.br/reputacao">Reputação</a></li>
-	                    <li><a href="http://www.cartoriomoreiradedeus.not.br/produtos">Produtos</a></li>
+	                    <li><a href="#HOME">Início</a></li>
+	                    <li><a href="#SERVICE">Serviços</a></li>
+	                    <li><a href="#ABOUT">O Cartório</a></li>
+	                    <li><a href="#TESTIMONIAL">Reputação</a></li>
+	                    <li><a href="#WORK">Produtos</a></li>
 	                    <li><a href="#CONTACT">Contato</a></li>
                         <li><a href="http://mail.cartoriomoreiradedeus.not.br">E-Mail</a></li>
-                        <li><a href="http://blog.cartoriomoreiradedeus.not.br">Blog</a></li>  
+                        <li><a href="http://blog.cartoriomoreiradedeus.not.br">Blog</a></li>
 	                  </ul>
 	                </div><!-- /.navbar-collapse -->
 	              </div><!-- /.container -->
-	            </nav>  
+	            </nav> 
+	            <div class="container">
+	                <div class="row">
+	                    <div class="col-md-12 text-center">
+	                        <div class="home_text wow fadeInUp animated">
+                                <img itemprop="logo" src="https://storage.googleapis.com/discoveryone/public/images/moreiradedeus/logoMD_192x171.png" alt="Logo do Cartório Moreira de Deus em Fortaleza"> 
+								<h2><span itemprop="brand">Cartório Moreira de Deus</span></h2>
+	                            <div class="col-md-3"></div>
+								<div class="col-md-6">
+									<form	name 	= "formPesquisa"  
+											method 	= "post" 
+											action	= "">
+										<div class="input-group">
+											<input type				= "search" 
+												   name				= "name"
+												   class			= "form-control"
+												   id				= "name"
+												   required
+												   placeholder		= "digite o nome que deseja pesquisar..."
+												   data-ng-model	= "enviopesquisa.nome">
+											<span class="input-group-btn">
+												<button class				= "btn btn-danger" 
+														type				= "button"
+														data-ng-disabled	= "formPesquisa.name.$error.required"
+														data-toggle			= "modal"
+														data-target			= "#findModal"
+														data-ng-click		= "enviarpesquisa()">Pesquisa</button>
+											</span>
+										</div>
+									</form>
+								</div>
+								<div class="col-md-3"></div>		
+							</div>	
+						</div>
+	                </div>
+	            </div>
+	            <div class="container">
+	                <div class="row">
+	                    <div class="col-md-12 text-center">
+	                        <div class="scroll_down">
+                            <a href="#SERVICE"><img src="https://storage.googleapis.com/discoveryone/public/images/moreiradedeus/scroll.png" alt="Cartório Moreira de Deus em Fortaleza"></a>
+	                            <h4>Rolar para Baixo</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>            
 	        </div>         
     </header>
-    
-    <section  class="service">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="contact_title  wow fadeInUp animated">
-                        <h1><span itemprop="name">União Estável</span></h1>
-                        <img src="https://storage.googleapis.com/discoveryone/public/images/moreiradedeus/shape.png" alt="Cartório Moreira de Deus em Fortaleza">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <h3>Descrição</h3>
-            <p class="text-justify"><span itemprop="description">É o instrumento pelo qual se formaliza a convivência entre duas pessoas, que agem como se casadas fossem. Exige-se a intenção de viver em família, logo resta não configurada a união estável quando houver um noivado ou até mesmo um simples namoro.</span></p>
-            <p class="text-justify">A inexistência de impedimentos matrimoniais também constitui um dos requisitos para a configuração da convivência, contudo salienta-se que a legislação atual, o qual proíbe o casamento de pessoas já casadas, não é necessário, ou melhor, não se leva em consideração na caracterização da união estável, uma vez que é perfeitamente possível a configuração da convivência entre pessoas casadas, mas que estejam separadas de fato.</p>
-            <p class="text-justify">É um ato bilateral, portanto deverá ser feito pelos dois declarantes. Vale ressaltar que, caso os declarantes não estejam presentes ao ato, é perfeitamente possível a representação de cada, ou dos dois, por meio de procuração com poderes específicos para se praticar o ato.</p>
-            <h3>Documentos necessários</h3>
-            <ul>
-                <li><p>Documento de Identificação (e das testemunhas também);</p></li>
-                <li><p><abbr title="Cadastro de Pessoa Física" class="initialism">CPF</abbr> (e das testemunhas também);</p></li>
-                <li><p>outros documentos poderão ser pedidos pelo tabelião, após analise.</p></li>
-            </ul>
-            <h3>Investimento</h3>
-                <meta itemprop="currenciesAccepted" content="BRL" />
-            <p><strong>Valor:</strong> <em>R$ <span itemprop="priceRange">134,14</span></em></p>
-            <p><strong>Forma de Pagamento:</strong> <span itemprop="paymentAccepted">Dinheiro, Visa, MasterCard, American Express e Elo</span></p>
-        </div>
-    </section>
-    
+   
     <section class="contact" id="CONTACT">
         <div class="container">
             <div class="row">
@@ -287,8 +305,8 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <div class="footer_logo wow fadeInUp animated">
-						<img src="https://storage.googleapis.com/discoveryone/public/images/moreiradedeus/logoMD_128x114.png" alt="Logo do Cartório Moreira de Deus em Fortaleza">
-                        <h2><span itemprop="brand">Cartório Moreira de Deus</span></h2>                        
+                        <img src="https://storage.googleapis.com/discoveryone/public/images/moreiradedeus/logoMD_128x114.png" alt="Logo do Cartório Moreira de Deus em Fortaleza">
+                        <h2>Cartório Moreira de Deus</h2>                        
 	                </div>
                 </div>
             </div>
@@ -337,7 +355,7 @@
     <script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/owl.carousel.min.js"></script>
     <script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/wow.min.js"></script>
     <script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/script.min.js"></script>
-	<script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/mdController.min.js"></script>
+	<script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/mdController.js"></script>
  <!-- =========================
      GOOGLE ANALYTICS
 ============================== -->   
