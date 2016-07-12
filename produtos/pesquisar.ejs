@@ -7,12 +7,12 @@
     <meta name="robots"                     content="all, index, follow"/>
     
     <!-- Geral -->
-    <meta name="title"                      content="Cartório Moreira de Deus">
+    <meta name="title"                      content="Pesquisar - Cartório Moreira de Deus">
     <meta name="language"                   content="pt-br"/>
     <meta charset="utf-8">
     <meta name="viewport"                   content="width=device-width, initial-scale=1.0">
-    <meta name="description"                content="Cartório Moreira de Deus - Existe para fornecer segurança jurídica e atender com qualidade a sociedade em Fortaleza - Ceará.">
-    <meta name="keywords"                   content="cartório fortaleza, cartório, cartório em fortaleza, cartório de notas, tabelionato de notas, cartorio tabelionato, cartório moreira de deus, moreira de deus">    
+    <meta name="description"                content="Pesquisar - Verifique a existência de ato registrado por nome, CPF ou CNPJ.">
+    <meta name="keywords"                   content="cartório fortaleza, cartório, cartório em fortaleza, cartório de notas, tabelionato de notas, cartorio tabelionato, cartório moreira de deus, pesquisar, nome, cpf, cnpj, busca, localizar, pesquisar por nome, pesquisar por cpf, pesquisar por cnpj">    
     <meta name="author"                     content="Lenines - www.lenines.com">
     <meta name="copyright"                  content="2016">
     
@@ -23,17 +23,17 @@
     
     <!-- Meta tags do Facebook -->
     <meta property="og:locale"              content="pt_BR">
-    <meta property="og:url"                 content="http://www.cartoriomoreiradedeus.not.br">
-    <meta property="og:title"               content="Cartório Moreira de Deus">
+    <meta property="og:url"                 content="http://www.cartoriomoreiradedeus.not.br/produtos/pesquisar">
+    <meta property="og:title"               content="Produto - Cartório Moreira de Deus">
     <meta property="og:site_name"           content="Cartório Moreira de Deus">
-    <meta property="og:description"         content="Cartório Moreira de Deus - Existe para fornecer segurança jurídica e atender com qualidade a sociedade em Fortaleza - Ceará.">
+    <meta property="og:description"         content="Pesquisar - Verifique a existência de ato registrado por nome, CPF ou CNPJ.">
     <meta property="og:type"                content="website">
     <meta property="og:image"               content="https://storage.googleapis.com/discoveryone/public/images/moreiradedeus/newlogo.png">
     <meta property="og:image:type"          content="image/png">
     <meta property="og:image:width"         content="231">
     <meta property="og:image:height"        content="35">
     
-    <title>Cartório Moreira de Deus</title>
+    <title>Pesquisar - Cartório Moreira de Deus</title>
     <!-- Google Font -->
     <link href='http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -86,7 +86,7 @@
                 <div id="preloader">
                     <div id="status">&nbsp;</div>
                 </div>
-    <header id="HOME" style="background-position: 50% -125px;">
+    <header id="HOME" style="background-position: 50% -125px;" data-ng-controller="mdControllerPesquisa">
 	        <div class="section_overlay">
 	            <nav class="navbar navbar-default navbar-fixed-top">
 	              <div class="container">
@@ -103,11 +103,11 @@
 	                <!-- Collect the nav links, forms, and other content for toggling -->
 	                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	                  <ul class="nav navbar-nav navbar-right">
-	                    <li><a href="#HOME">Início</a></li>
-	                    <li><a href="#SERVICE">Serviços</a></li>
-	                    <li><a href="#ABOUT">O Cartório</a></li>
-	                    <li><a href="#TESTIMONIAL">Reputação</a></li>
-	                    <li><a href="#WORK">Produtos</a></li>
+	                    <li><a href="http://www.cartoriomoreiradedeus.not.br">Início</a></li>
+	                    <li><a href="http://www.cartoriomoreiradedeus.not.br/servicos">Serviços</a></li>
+	                    <li><a href="http://www.cartoriomoreiradedeus.not.br/ocartorio">O Cartório</a></li>
+	                    <li><a href="http://www.cartoriomoreiradedeus.not.br/reputacao">Reputação</a></li>
+	                    <li><a href="http://www.cartoriomoreiradedeus.not.br/produtos">Produtos</a></li>
 	                    <li><a href="#CONTACT">Contato</a></li>
                         <li><a href="http://mail.cartoriomoreiradedeus.not.br">E-Mail</a></li>
                         <li><a href="http://blog.cartoriomoreiradedeus.not.br">Blog</a></li>
@@ -121,35 +121,82 @@
 	                        <div class="home_text wow fadeInUp animated">
                                 <img itemprop="logo" src="https://storage.googleapis.com/discoveryone/public/images/moreiradedeus/logoMD_192x171.png" alt="Logo do Cartório Moreira de Deus em Fortaleza"> 
 								<h2><span itemprop="brand">Cartório Moreira de Deus</span></h2>
-	                            <div class="col-md-3"></div>
-								<div class="col-md-6">
-									<form	name 	= "formPesquisa"  
-											method 	= "post" 
-											action	= "">
-										<div class="input-group">
-											<input type				= "search" 
-												   name				= "name"
-												   class			= "form-control"
-												   id				= "name"
-												   required
-												   placeholder		= "digite o nome que deseja pesquisar..."
-												   data-ng-model	= "enviopesquisa.nome">
-											<span class="input-group-btn">
-												<button class				= "btn btn-danger" 
-														type				= "button"
-														data-ng-disabled	= "formPesquisa.name.$error.required"
-														data-toggle			= "modal"
-														data-target			= "#findModal"
-														data-ng-click		= "enviarpesquisa()">Pesquisa</button>
-											</span>
-										</div>
-									</form>
+	                            <div class="col-md-4"></div>
+								<div class="col-md-4">
+									<button type		 	= "button" 
+											class		 	= "btn btn-danger btn-lg btn-block" 
+											data-ng-click 	= ""
+											data-toggle		= "modal"
+											data-target	 	= "#findcpfModal"> Pesquisar por CPF
+									</button>
+									<button type		 	= "button" 
+											class		 	= "btn btn-danger btn-lg btn-block" 
+											data-ng-click 	= ""
+											data-toggle		= "modal"
+											data-target	 	= "#findcnpjModal"> Pesquisar por CNPJ
+									</button>
+									<button type			= "button" 
+											class		 	= "btn btn-danger btn-lg btn-block" 
+											data-ng-click 	= ""
+											data-toggle		= "modal"
+											data-target	 	= "#findnomeModal"> Pesquisar por Nome
+									</button>
 								</div>
-								<div class="col-md-3"></div>		
+								<div class="col-md-4"></div>		
 							</div>	
 						</div>
 	                </div>
 	            </div>
+				
+			<!-- Modal - Mensagem do Contato-->
+			<div class="modal fade" id="findcpfModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type			= "button" 
+							class			= "close" 
+							data-dismiss	= "modal" 
+							aria-label		= "Close"
+							data-ng-click	= "zerar()"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Pesquisar por CPF atos registrados</h4>
+				  </div>
+				  <div class="modal-body">
+					<form	name 	= "formPesquisa"  
+							method 	= "post" 
+							action	= "">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="input-group">
+									<input	type			= "CPF" 
+											name			= "CPF"
+											class			= "form-control"
+											id				= "CPF"
+											required
+											input-Cpf
+											placeholder		= "digite o CPF, exemplo 098.765.432-10"
+											data-ng-model	= "enviopesquisa.data">
+									<span class="input-group-btn">
+										<button class				= "btn btn-danger" 
+												type				= "button"
+												data-ng-disabled	= "formPesquisa.CPF.$error.required"
+												data-ng-click		= "enviarpesquisa('CPF')">Pesquisa</button>
+									</span>
+								</div>
+							</div>
+						</div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type			= "button" 
+							class			= "btn btn-default" 
+							data-dismiss	= "modal" 
+							data-ng-click 	= "zerar()">Fechar</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!-- Fim do bloco do Modal -->
+				
 	            <div class="container">
 	                <div class="row">
 	                    <div class="col-md-12 text-center">
@@ -175,7 +222,7 @@
                 </div>
             </div>
         </div>
-        <div class="container" data-ng-controller="mdController">
+        <div class="container" data-ng-controller="mdControllerContato">
             <div class="row">
                 <div class="col-md-3  wow fadeInLeft animated">
                     <div class="single_contact_info">
@@ -262,7 +309,7 @@
                 </div>
             </div>
 			
-			<!-- Modal -->
+			<!-- Modal - Mensagem do Contato-->
 			<div class="modal fade" id="msgModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			  <div class="modal-dialog" role="document">
 				<div class="modal-content">
@@ -355,7 +402,14 @@
     <script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/owl.carousel.min.js"></script>
     <script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/wow.min.js"></script>
     <script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/script.min.js"></script>
-	<script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/mdController.js"></script>
+	
+	<script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/teste/geoLocation.js"></script>
+	<script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/teste/formatTel.js"></script>
+	<script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/teste/mdControllerContato.js"></script>
+	<script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/teste/formatCpf.js"></script>
+	<script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/teste/formatCnpj.js"></script>
+	<script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/teste/mdControllerPesquisar.js"></script>
+	<script src="https://storage.googleapis.com/discoveryone/public/javascripts/moreiradedeus/teste/mdCorePesquisar.js"></script>
  <!-- =========================
      GOOGLE ANALYTICS
 ============================== -->   
