@@ -192,11 +192,11 @@
 								<img src="https://storage.googleapis.com/discoveryone/public/images/moreiradedeus/avatar.png" alt="Foto da pessoa vinculada ao CPF" class="img-responsive img-circle">
 							</div>
 							<div class="col-md-8">
-								<h5>Nome : <strong>{{dadosretorno.nome}}</strong></h5>
+								<h5>Nome : <strong>{{dadosretorno.nome | nome}}</strong></h5>
 								<h5>Data de Nascimento : <strong>{{dadosretorno.datanascimento | date:'dd/MM/yyyy HH:mm'}}</strong></h5>
 								<h5>Data do Cadastro : <strong>{{dadosretorno.datacadastro | date:'dd/MM/yyyy HH:mm'}}</strong></h5>
-								<h5>CPF : <strong>{{dadosretorno.cpf | cpf}}</strong></h5>
-								<h5>Atos registrados : <strong>{{dadosretorno.atosregistrado}}</strong></h5>
+								<h5>CPF : <strong>{{dadosretorno.cpfcnpj | cpf}}</strong></h5>
+								<h5>Atos registrados : <span class="label label-warning"><strong>{{dadosretorno.atosregistrado}}</strong></span></h5>
 							</div>
 						</div>
 					</div>
