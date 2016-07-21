@@ -162,12 +162,9 @@
 				  </div>
 				  <div class="modal-body">
 					<div class="row">
-						<form	name 	= "formPesquisa"  
-								method 	= "get" 
-								action	= "">
+						<form ng-submit="enviarpesquisa('CPF')">
 								<div class="col-md-12">
 									<div class="input-group">
-										<form ng-submit="enviarpesquisa('CPF')">
 											<input	type			= "CPF" 
 													name			= "CPF"
 													class			= "form-control"
@@ -181,7 +178,6 @@
 														type				= "submit"
 														data-ng-disabled	= "formPesquisa.CPF.$error.required" >Pesquisa</button>
 											</span>
-										</form>
 									</div>
 								</div>
 						</form>
