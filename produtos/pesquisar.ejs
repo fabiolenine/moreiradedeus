@@ -167,20 +167,21 @@
 								action	= "">
 								<div class="col-md-12">
 									<div class="input-group">
-										<input	type			= "CPF" 
-												name			= "CPF"
-												class			= "form-control"
-												id				= "CPF"
-												required
-												input-Cpf
-												placeholder		= "digite o CPF, exemplo 098.765.432-10"
-												data-ng-model	= "enviopesquisa.data">
-										<span class="input-group-btn">
-											<button class				= "btn btn-danger" 
-													type				= "button"
-													data-ng-disabled	= "formPesquisa.CPF.$error.required"
-													data-ng-click		= "enviarpesquisa('CPF')">Pesquisa</button>
-										</span>
+										<form ng-submit="enviarpesquisa('CPF')">
+											<input	type			= "CPF" 
+													name			= "CPF"
+													class			= "form-control"
+													id				= "CPF"
+													required
+													input-Cpf
+													placeholder		= "digite o CPF, exemplo 098.765.432-10"
+													data-ng-model	= "enviopesquisa.data">
+											<span class="input-group-btn">
+												<button class				= "btn btn-danger" 
+														type				= "submit"
+														data-ng-disabled	= "formPesquisa.CPF.$error.required" >Pesquisa</button>
+											</span>
+										</form>
 									</div>
 								</div>
 						</form>
