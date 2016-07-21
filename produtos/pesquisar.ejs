@@ -197,7 +197,7 @@
 								<h5>Data do Cadastro : <strong>{{dadosretorno.datacadastro | date:'dd/MM/yyyy HH:mm'}}</strong></h5>
 								<h5>CPF : <strong>{{dadosretorno.cpfcnpj | cpf}}</strong></h5>
 								<h5>Atos registrados :</h5>
-									<ul ng-repeat="ato in dadosretorno.atosregistrado">
+									<ul class="list-inline" ng-repeat="ato in dadosretorno.atosregistrado">
 										<li><span class="label label-warning">{{ato}}</span></li>
 									</ul>
 							</div>
