@@ -190,13 +190,13 @@
 								<img src="https://storage.googleapis.com/discoveryone/public/images/moreiradedeus/avatar.png" alt="Foto da pessoa vinculada ao CPF" class="img-responsive img-circle">
 							</div>
 							<div class="col-md-8">
-								<h5>Nome : <strong>{{dadosretorno.nome | nome}}</strong></h5>
-								<h5>Data de Nascimento : <strong>{{dadosretorno.datanascimento | date:'dd/MM/yyyy HH:mm'}}</strong></h5>
-								<h5>Data do Cadastro : <strong>{{dadosretorno.datacadastro | date:'dd/MM/yyyy HH:mm'}}</strong></h5>
-								<h5>CPF : <strong>{{dadosretorno.cpfcnpj | cpf}}</strong></h5>
+								<h5>Nome : <strong>{{::dadosretorno.nome | nome}}</strong></h5>
+								<h5>Data de Nascimento : <strong>{{::dadosretorno.datanascimento | date:'dd/MM/yyyy HH:mm'}}</strong></h5>
+								<h5>Data do Cadastro : <strong>{{::dadosretorno.datacadastro | date:'dd/MM/yyyy HH:mm'}}</strong></h5>
+								<h5>CPF : <strong>{{::dadosretorno.cpfcnpj | cpf}}</strong></h5>
 								<h5>Atos registrados :</h5>
 									<ul class="list-inline" ng-repeat="ato in dadosretorno.atosregistrado">
-										<li><span class="label label-warning">{{ato}}</span></li>
+										<li><span class="label label-warning">{{::ato}}</span></li>
 									</ul>
 							</div>
 						</div>
@@ -254,13 +254,13 @@
 								<img src="https://storage.googleapis.com/discoveryone/public/images/moreiradedeus/avatar.png" alt="Foto do representante vinculado ao CNPJ" class="img-responsive img-circle">
 							</div>
 							<div class="col-md-8">
-								<h5>Nome : <strong>{{dadosretorno.nome | nome}}</strong></h5>
-								<h5>Data de Nascimento : <strong>{{dadosretorno.datanascimento | date:'dd/MM/yyyy HH:mm'}}</strong></h5>
-								<h5>Data do Cadastro : <strong>{{dadosretorno.datacadastro | date:'dd/MM/yyyy HH:mm'}}</strong></h5>
-								<h5>CNPJ : <strong>{{dadosretorno.cpfcnpj | cnpj}}</strong></h5>
+								<h5>Nome : <strong>{{::dadosretorno.nome | nome}}</strong></h5>
+								<h5>Data de Nascimento : <strong>{{::dadosretorno.datanascimento | date:'dd/MM/yyyy HH:mm'}}</strong></h5>
+								<h5>Data do Cadastro : <strong>{{::dadosretorno.datacadastro | date:'dd/MM/yyyy HH:mm'}}</strong></h5>
+								<h5>CNPJ : <strong>{{::dadosretorno.cpfcnpj | cnpj}}</strong></h5>
 								<h5>Atos registrados :</h5>
 									<ul class="list-inline" ng-repeat="ato in dadosretorno.atosregistrado">
-										<li><span class="label label-warning">{{ato}}</span></li>
+										<li><span class="label label-warning">{{::ato}}</span></li>
 									</ul>
 							</div>
 						</div>
@@ -312,18 +312,18 @@
 					</div>
 					<hr>
 					<div class="row animate-hide" data-ng-hide="esconder">
-						<div class="col-md-12" ng-repeat="registro in dadosretorno">
+						<div class="col-md-12" ng-repeat="registro in dadosretorno track by $index">
 							<div class="col-md-4">
 								<img src="https://storage.googleapis.com/discoveryone/public/images/moreiradedeus/avatar.png" alt="Foto da pessoa vinculada ao Nome" class="img-responsive img-circle">
 							</div>
 							<div class="col-md-8">
-								<h5>Nome : <strong>{{registro.nome | nome}}</strong></h5>
-								<h5>Data de Nascimento : <strong>{{registro.datanascimento | date:'dd/MM/yyyy HH:mm'}}</strong></h5>
-								<h5>Data do Cadastro : <strong>{{registro.datacadastro | date:'dd/MM/yyyy HH:mm'}}</strong></h5>
-								<h5>CNPJ : <strong>{{registro.cpfcnpj}}</strong></h5>
+								<h5>Nome : <strong>{{::registro.nome | nome}}</strong></h5>
+								<h5>Data de Nascimento : <strong>{{::registro.datanascimento | date:'dd/MM/yyyy HH:mm'}}</strong></h5>
+								<h5>Data do Cadastro : <strong>{{::registro.datacadastro | date:'dd/MM/yyyy HH:mm'}}</strong></h5>
+								<h5>CNPJ : <strong>{{::registro.cpfcnpj}}</strong></h5>
 								<h5>Atos registrados :</h5>
 									<ul class="list-inline" ng-repeat="ato in registro.atosregistrado">
-										<li><span class="label label-warning">{{ato}}</span></li>
+										<li><span class="label label-warning">{{::ato}}</span></li>
 									</ul>
 							</div>
 						</div>
@@ -465,7 +465,7 @@
 					<h4 class="modal-title" id="myModalLabel">Mensagem</h4>
 				  </div>
 				  <div class="modal-body">
-					<p>{{msg.retorno}}</p>
+					<p>{{::msg.retorno}}</p>
 				  </div>
 				  <div class="modal-footer">
 					<button type			= "button" 
