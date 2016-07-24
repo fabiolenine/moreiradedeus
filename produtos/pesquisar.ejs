@@ -158,7 +158,7 @@
 							class			= "close" 
 							data-dismiss	= "modal" 
 							aria-label		= "Close"
-							data-ng-click	= "zerar()"><span aria-hidden="true">&times;</span></button>
+							data-ng-click	= "zerarEscolha()"><span aria-hidden="true">&times;</span></button>
 					<h4 class="modal-title" id="myModalLabel">Pesquisar por CPF atos registrados</h4>
 				  </div>
 				  <div class="modal-body">
@@ -206,7 +206,7 @@
 					<button type			= "button" 
 							class			= "btn btn-default" 
 							data-dismiss	= "modal" 
-							data-ng-click 	= "zerar()">Fechar</button>
+							data-ng-click 	= "zerarEscolha()">Fechar</button>
 				  </div>
 				</div>
 			  </div>
@@ -222,7 +222,7 @@
 							class			= "close" 
 							data-dismiss	= "modal" 
 							aria-label		= "Close"
-							data-ng-click	= "zerar()"><span aria-hidden="true">&times;</span></button>
+							data-ng-click	= "zerarEscolha()"><span aria-hidden="true">&times;</span></button>
 					<h4 class="modal-title" id="myModalLabel">Pesquisar por CNPJ atos registrados</h4>
 				  </div>
 				  <div class="modal-body">
@@ -270,12 +270,76 @@
 					<button type			= "button" 
 							class			= "btn btn-default" 
 							data-dismiss	= "modal" 
-							data-ng-click 	= "zerar()">Fechar</button>
+							data-ng-click 	= "zerarEscolha()">Fechar</button>
 				  </div>
 				</div>
 			  </div>
 			</div>
-			<!-- Fim do bloco do Modal -->				
+			<!-- Fim do bloco do Modal -->
+			
+			<!-- Modal - Pesquisar por Nome -->
+			<div class="modal fade" id="findnomeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type			= "button" 
+							class			= "close" 
+							data-dismiss	= "modal" 
+							aria-label		= "Close"
+							data-ng-click	= "zerarEscolha()"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Pesquisar por Nome atos registrados</h4>
+				  </div>
+				  <div class="modal-body">
+					<div class="row">
+						<form ng-submit="enviarpesquisa('Nome')">
+								<div class="col-md-12">
+									<div class="input-group">
+											<input	type			= "NOME" 
+													name			= "NOME"
+													class			= "form-control"
+													id				= "NOME"
+													required
+													input-Cnpj
+													placeholder		= "digite o Nome que deseja pesquisar..."
+													data-ng-model	= "enviopesquisa.data">
+											<span class="input-group-btn">
+												<button class				= "btn btn-danger" 
+														type				= "submit"
+														data-ng-disabled	= "formPesquisa.NOME.$error.required" >Pesquisa</button>
+											</span>
+									</div>
+								</div>
+						</form>
+					</div>
+					<hr>
+					<div class="row animate-hide" data-ng-hide="esconder">
+						<div class="col-md-12">
+							<div class="col-md-4">
+								<img src="https://storage.googleapis.com/discoveryone/public/images/moreiradedeus/avatar.png" alt="Foto da pessoa vinculada ao Nome" class="img-responsive img-circle">
+							</div>
+							<div class="col-md-8" ng-repeat="registro in dadosretorno">
+								<h5>Nome : <strong>{{registro.nome | nome}}</strong></h5>
+								<h5>Data de Nascimento : <strong>{{registro.datanascimento | date:'dd/MM/yyyy HH:mm'}}</strong></h5>
+								<h5>Data do Cadastro : <strong>{{registro.datacadastro | date:'dd/MM/yyyy HH:mm'}}</strong></h5>
+								<h5>CNPJ : <strong>{{registro.cpfcnpj | cnpj}}</strong></h5>
+								<h5>Atos registrados :</h5>
+									<ul class="list-inline" ng-repeat="ato in registro.atosregistrado">
+										<li><span class="label label-warning">{{ato}}</span></li>
+									</ul>
+							</div>
+						</div>
+					</div>
+				  </div>
+				  <div class="modal-footer">
+					<button type			= "button" 
+							class			= "btn btn-default" 
+							data-dismiss	= "modal" 
+							data-ng-click 	= "zerarEscolha()">Fechar</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!-- Fim do bloco do Modal -->
 				
 	            <div class="container">
 	                <div class="row">
