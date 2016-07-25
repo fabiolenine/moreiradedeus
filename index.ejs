@@ -81,7 +81,7 @@
 	<link rel="icon" href="https://storage.googleapis.com/discoveryone/public/images/moreiradedeus/icon/favicon.ico">
 	
 </head>
-<body itemscope itemtype = "http://schema.org/Notary">
+<body itemscope itemtype = "http://schema.org/Notary" data-ng-controller="mdControllerContato">
                 <!-- Preloader -->
                 <div id="preloader">
                     <div id="status">&nbsp;</div>
@@ -353,19 +353,16 @@
                     </div>
                 </div>
                 <div class="col-md-6 no_padding" itemprop="itemOffered" itemscope itemtype="http://schema.org/Product">
-                    <div class="single_image">
+                    <div class="single_image" data-ng-click="ProdutosLink('http://www.cartoriomoreiradedeus.not.br/produtos/pesquisar')">
                         <img href="http://www.cartoriomoreiradedeus.not.br/produtos/pesquisar" src="https://storage.googleapis.com/discoveryone/public/images/moreiradedeus/w4new.png" alt="Cartório Moreira de Deus em Fortaleza">
-                        <div class="image_overlay">
+                        <div class="image_overlay" >
                             <a href="http://www.cartoriomoreiradedeus.not.br/produtos/pesquisar">Acesse o nosso App</a>
-							<a href="http://www.cartoriomoreiradedeus.not.br/produtos/pesquisar">
-								<h2>
-									<span itemprop="name">Pesquisar</span>
-								</h2>
-							</a>
-							<a href="http://www.cartoriomoreiradedeus.not.br/produtos/pesquisar">
-								<h4>
-									<span itemprop="description">Localiza quais tipos de documentos e pessoas estão vinculados a você</span>
-								</h4>
+							<h2>
+								<span itemprop="name">Pesquisar</span>
+							</h2>
+							<h4>
+								<span itemprop="description">Localiza quais tipos de documentos e pessoas estão vinculados a você</span>
+							</h4>
 							</a>
                         </div>                        
                     </div>
@@ -404,7 +401,7 @@
                 </div>
             </div>
         </div>
-        <div class="container" data-ng-controller="mdControllerContato">
+        <div class="container">
             <div class="row">
                 <div class="col-md-3  wow fadeInLeft animated">
                     <div class="single_contact_info">
