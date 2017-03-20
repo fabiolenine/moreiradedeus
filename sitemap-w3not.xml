@@ -7,7 +7,7 @@
     <url>
         <loc>http://www.moreiradedeus.not.br/servicos.html</loc>
         <changefreq>weekly</changefreq>
-    </url>    
+    </url>
     <url>
         <loc>http://www.moreiradedeus.not.br/ocartorio.html</loc>
         <changefreq>weekly</changefreq>
@@ -26,10 +26,6 @@
     </url>
     <url>
         <loc>http://www.moreiradedeus.not.br/servicos/autenticacao.html</loc>
-        <changefreq>weekly</changefreq>
-    </url>
-    <url>
-        <loc>http://www.moreiradedeus.not.br/servicos/certificadodigital.html</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>

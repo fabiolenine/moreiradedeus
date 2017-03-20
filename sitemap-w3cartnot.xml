@@ -7,7 +7,7 @@
     <url>
         <loc>http://www.cartoriomoreiradedeus.not.br/servicos.html</loc>
         <changefreq>weekly</changefreq>
-    </url>    
+    </url>
     <url>
         <loc>http://www.cartoriomoreiradedeus.not.br/ocartorio.html</loc>
         <changefreq>weekly</changefreq>
@@ -26,10 +26,6 @@
     </url>
     <url>
         <loc>http://www.cartoriomoreiradedeus.not.br/servicos/autenticacao.html</loc>
-        <changefreq>weekly</changefreq>
-    </url>
-    <url>
-        <loc>http://www.cartoriomoreiradedeus.not.br/servicos/certificadodigital.html</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
@@ -75,5 +71,5 @@
     <url>
         <loc>http://blog.cartoriomoreiradedeus.not.br/</loc>
         <changefreq>daily</changefreq>
-    </url>    
+    </url>
 </urlset>
